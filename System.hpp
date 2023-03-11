@@ -1,10 +1,12 @@
 //      +--------------------------------------------------------------------------------+
 //      |                                  System v0.1.0                                 |
+//      |  Modified Date : 2023/3/11                                                     |
 //      |  Introduction : System in C++                                                  |
-//      |  Modified Date : 2023/3/7                                                      |
 //      |  License : MIT                                                                 |
-//      |  Source Code : https://github.com/CodeMouse179/System                          |
-//      |  Readme : https://github.com/CodeMouse179/System/blob/main/README.md           |
+//      |  Platform : Windows, Linux, macOS                                              |
+//      |  C++ Required Version : C++ 98                                                 |
+//      |  API Family : https://github.com/CodeMouse179/System                           |
+//      |  Repository : https://github.com/CodeMouse179/System                           |
 //      |                                                                                |
 //      |                             Designer : CodeMouse179                            |
 //      |  Email : codemouse179@gmail.com                                                |
