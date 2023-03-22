@@ -4,7 +4,7 @@
 int main()
 {
 #ifdef SYSTEM_HPP
-    std::cout << "Example Started.\n";
+    std::cout << "Example Started!!!\n";
     std::cout << "System Version : " << SYSTEM_VERSION_STRING << "\n";
     std::cout << "Current Platform : ";
 #ifdef SYSTEM_WINDOWS
@@ -16,7 +16,7 @@ int main()
 #ifdef SYSTEM_MACOS
     std::cout << "macOS";
 #endif
-    std::cout << "Current Compiler : ";
+    std::cout << "\nCurrent Compiler : ";
 #ifdef SYSTEM_MSC
     std::cout << "Microsoft C/C++ Compiler";
 #endif
@@ -26,7 +26,7 @@ int main()
 #ifdef SYSTEM_CLA
     std::cout << "Clang C/C++ Compiler";
 #endif
-    std::cout << "\nExample Finished.\n";
+    std::cout << "\nExample Finished...\n";
 #endif
     return 0;
 }
