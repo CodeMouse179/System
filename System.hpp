@@ -1,6 +1,6 @@
 //      +--------------------------------------------------------------------------------+
-//      |                                  System v0.2.0                                 |
-//      |  Modified Date : 2023/3/13                                                     |
+//      |                                  System v0.3.0                                 |
+//      |  Modified Date : 2023/3/23                                                     |
 //      |  Introduction : System in C++                                                  |
 //      |  License : MIT                                                                 |
 //      |  Platform : Windows, Linux, macOS                                              |
@@ -18,10 +18,10 @@
 #define SYSTEM_HPP
 
 #define SYSTEM_VERSION_MAJOR 0
-#define SYSTEM_VERSION_MINOR 2
+#define SYSTEM_VERSION_MINOR 3
 #define SYSTEM_VERSION_PATCH 0
 #define SYSTEM_VERSION (SYSTEM_VERSION_MAJOR << 16 | SYSTEM_VERSION_MINOR << 8 | SYSTEM_VERSION_PATCH)
-#define SYSTEM_VERSION_STRING "0.2.0"
+#define SYSTEM_VERSION_STRING "0.3.0"
 
 //Windows Platform:
 #if defined(WIN32) || defined(_WIN32)
@@ -86,6 +86,21 @@
 #if (__cplusplus >= 202002L)
 #define SYSTEM_CXX_20 1
 #endif
+#endif
+
+//Microsoft C/C++ Compiler:
+#if defined(_MSC_VER) && !defined(__clang__)
+#define SYSTEM_MSC 1
+#endif
+
+//GNU C/C++ Compiler:
+#if defined(__GNUC__) && !defined(__clang__)
+#define SYSTEM_GCC 1
+#endif
+
+//Clang C/C++ Compiler:
+#if defined(__clang__)
+#define SYSTEM_CLA 1
 #endif
 
 namespace System
