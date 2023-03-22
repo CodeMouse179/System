@@ -16,6 +16,30 @@ C++ Required Version : C++ 98
 
 API Family : [System](https://github.com/CodeMouse179/System)
 
+## Introduction
+
+System.hpp is a fundamental platform-specific header file for C++.
+
+The purpose is to provide C++ programmers with convenient and reliable macros.
+
+## Installation
+
+System.hpp is distributed as a single header file so it's easy to install, just follow 2 steps:
+
+1. Copy System.hpp into your project
+
+2. #include "System.hpp"
+
+## Compile and Run Example
+
+Windows : Open System.sln with VisualStudio and click Windows Debugger
+
+Linux, macOS : cmake . && make && ./s
+
+## Documentation
+
+[Documentation](https://github.com/CodeMouse179/System/blob/main/Doc/README.md)
+
 ## API Family
 
 * [System](https://github.com/CodeMouse179/System)
