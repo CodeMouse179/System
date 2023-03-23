@@ -14,9 +14,7 @@ void write_line(const char* str)
 {
     std::cout << str << "\n";
 }
-#endif
-
-#ifdef SYSTEM_C
+#else
 #include <stdio.h>
 void write(const char* str)
 {
@@ -42,7 +40,9 @@ void system_end()
 void print_system_hpp_version()
 {
     write("1.System Version   : ");
+#ifdef SYSTEM_HPP
     write(SYSTEM_VERSION_STRING);
+#endif
     write_line("");
 }
 
