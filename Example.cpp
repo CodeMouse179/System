@@ -54,6 +54,27 @@ void print_current_platform()
 
 void print_current_standard()
 {
+    write("Current Standard : ");
+#ifdef SYSTEM_CXX_20
+    write_line("C++ 20");
+    return;
+#endif
+#ifdef SYSTEM_CXX_17
+    write_line("C++ 17");
+    return;
+#endif
+#ifdef SYSTEM_CXX_14
+    write_line("C++ 14");
+    return;
+#endif
+#ifdef SYSTEM_CXX_11
+    write_line("C++ 11");
+    return;
+#endif
+#ifdef SYSTEM_CXX_98
+    write_line("C++ 98");
+    return;
+#endif
 }
 
 void print_current_compiler()
