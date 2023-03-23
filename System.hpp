@@ -1,6 +1,6 @@
 //      +--------------------------------------------------------------------------------+
-//      |                                  System v0.5.0                                 |
-//      |  Modified Date : 2023/3/23                                                     |
+//      |                                  System v0.5.1                                 |
+//      |  Modified Date : 2023/3/24                                                     |
 //      |  Introduction : System in C/C++                                                |
 //      |  License : MIT                                                                 |
 //      |  Platform : Windows, Linux, macOS                                              |
@@ -19,9 +19,9 @@
 
 #define SYSTEM_VERSION_MAJOR 0
 #define SYSTEM_VERSION_MINOR 5
-#define SYSTEM_VERSION_PATCH 0
+#define SYSTEM_VERSION_PATCH 1
 #define SYSTEM_VERSION (SYSTEM_VERSION_MAJOR << 16 | SYSTEM_VERSION_MINOR << 8 | SYSTEM_VERSION_PATCH)
-#define SYSTEM_VERSION_STRING "0.5.0"
+#define SYSTEM_VERSION_STRING "0.5.1"
 
 //Microsoft C/C++ Compiler:
 #if defined(_MSC_VER) && !defined(__clang__)
@@ -70,6 +70,9 @@
 #if defined(__STDC_VERSION__) && !defined(__cplusplus)
 #define SYSTEM_C 1
 #endif
+#if !defined(__cplusplus)
+#define SYSTEM_C 2
+#endif
 #endif
 
 //C Language(Standard C/C++ Compiler):
@@ -77,10 +80,16 @@
 #if defined(__STDC__) && !defined(__cplusplus)
 #define SYSTEM_C 1
 #endif
+#if !defined(__cplusplus)
+#define SYSTEM_C 2
+#endif
 #endif
 
 //C Version Definition(Microsoft C/C++ Compiler):
 #if defined(SYSTEM_MSC) && defined(SYSTEM_C)
+#if !defined(__STDC_VERSION__)
+#define SYSTEM_C_90 1
+#endif
 #if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199409L)
 #define SYSTEM_C_90 1
 #endif
