@@ -1,5 +1,5 @@
 //      +--------------------------------------------------------------------------------+
-//      |                                  System v0.4.0                                 |
+//      |                                  System v0.5.0                                 |
 //      |  Modified Date : 2023/3/23                                                     |
 //      |  Introduction : System in C/C++                                                |
 //      |  License : MIT                                                                 |
@@ -18,10 +18,10 @@
 #define SYSTEM_HPP
 
 #define SYSTEM_VERSION_MAJOR 0
-#define SYSTEM_VERSION_MINOR 4
+#define SYSTEM_VERSION_MINOR 5
 #define SYSTEM_VERSION_PATCH 0
 #define SYSTEM_VERSION (SYSTEM_VERSION_MAJOR << 16 | SYSTEM_VERSION_MINOR << 8 | SYSTEM_VERSION_PATCH)
-#define SYSTEM_VERSION_STRING "0.4.0"
+#define SYSTEM_VERSION_STRING "0.5.0"
 
 //Microsoft C/C++ Compiler:
 #if defined(_MSC_VER) && !defined(__clang__)
@@ -76,6 +76,41 @@
 #if defined(SYSTEM_SCC)
 #if defined(__STDC__) && !defined(__cplusplus)
 #define SYSTEM_C 1
+#endif
+#endif
+
+//C Version Definition(Microsoft C/C++ Compiler):
+#if defined(SYSTEM_MSC) && defined(SYSTEM_C)
+#if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199409L)
+#define SYSTEM_C_90 1
+#endif
+#if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L)
+#define SYSTEM_C_99 1
+#endif
+#if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 201112L)
+#define SYSTEM_C_11 1
+#endif
+#if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 201710L)
+#define SYSTEM_C_17 1
+#endif
+#endif
+
+//C Version Definition(Standard C/C++ Compiler):
+#if defined(SYSTEM_SCC) && defined(SYSTEM_C)
+#if defined(__STDC__) && !defined(__STDC_VERSION__)
+#define SYSTEM_C_90 1
+#endif
+#if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199409L)
+#define SYSTEM_C_90 1
+#endif
+#if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L)
+#define SYSTEM_C_99 1
+#endif
+#if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 201112L)
+#define SYSTEM_C_11 1
+#endif
+#if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 201710L)
+#define SYSTEM_C_17 1
 #endif
 #endif
 

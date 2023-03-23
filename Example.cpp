@@ -99,6 +99,22 @@ void print_current_standard()
 void print_current_c_standard()
 {
     write("Current CStandard: ");
+#ifdef SYSTEM_C_17
+    write_line("C 17");
+    return;
+#endif
+#ifdef SYSTEM_C_11
+    write_line("C 11");
+    return;
+#endif
+#ifdef SYSTEM_C_99
+    write_line("C 99");
+    return;
+#endif
+#ifdef SYSTEM_C_90
+    write_line("C 90");
+    return;
+#endif
     write_line("");
 }
 
