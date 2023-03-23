@@ -52,6 +52,16 @@ void print_current_platform()
     write_line();
 }
 
+int c_or_cpp()
+{
+#ifdef SYSTEM_C
+    return 1;
+#endif
+#ifdef SYSTEM_CXX
+    return 2;
+#endif
+}
+
 void print_current_standard()
 {
     write("Current Standard : ");
@@ -77,6 +87,12 @@ void print_current_standard()
 #endif
 }
 
+void print_current_c_standard()
+{
+    write("Current CStandard: ");
+    write_line();
+}
+
 void print_current_compiler()
 {
     write("Current Compiler : ");
@@ -98,7 +114,9 @@ int main()
     system_start();
     print_system_hpp_version();
     print_current_platform();
-    print_current_standard();
+    int r = c_or_cpp();
+    if (r == 1) print_current_c_standard();
+    if (r == 2) print_current_standard();
     print_current_compiler();
     system_end();
 #endif
