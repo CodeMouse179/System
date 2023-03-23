@@ -6,21 +6,21 @@
 
 [README - türkçe](https://github.com/CodeMouse179/System/blob/main/Doc/README_TR.md)
 
-## System in C++
+## System in C/C++
 
 License : MIT
 
 Platform : Windows, Linux, macOS
 
-C++ Required Version : C++ 98
+C/C++ Required Version : C 90/C++ 98
 
 API Family : [System](https://github.com/CodeMouse179/System)
 
 ## Introduction
 
-System.hpp is a fundamental platform-specific header file for C++.
+System.hpp is a fundamental platform-specific header file for C/C++.
 
-The purpose is to provide C++ programmers with convenient and reliable macros.
+The purpose is to provide C/C++ programmers with convenient and reliable macros.
 
 ## Inspiration
 

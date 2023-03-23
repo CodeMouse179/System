@@ -1,10 +1,10 @@
 //      +--------------------------------------------------------------------------------+
-//      |                                  System v0.3.0                                 |
+//      |                                  System v0.3.1                                 |
 //      |  Modified Date : 2023/3/23                                                     |
-//      |  Introduction : System in C++                                                  |
+//      |  Introduction : System in C/C++                                                |
 //      |  License : MIT                                                                 |
 //      |  Platform : Windows, Linux, macOS                                              |
-//      |  C++ Required Version : C++ 98                                                 |
+//      |  C/C++ Required Version : C 90/C++ 98                                          |
 //      |  API Family : https://github.com/CodeMouse179/System                           |
 //      |  Repository : https://github.com/CodeMouse179/System                           |
 //      |                                                                                |
@@ -19,9 +19,9 @@
 
 #define SYSTEM_VERSION_MAJOR 0
 #define SYSTEM_VERSION_MINOR 3
-#define SYSTEM_VERSION_PATCH 0
+#define SYSTEM_VERSION_PATCH 1
 #define SYSTEM_VERSION (SYSTEM_VERSION_MAJOR << 16 | SYSTEM_VERSION_MINOR << 8 | SYSTEM_VERSION_PATCH)
-#define SYSTEM_VERSION_STRING "0.3.0"
+#define SYSTEM_VERSION_STRING "0.3.1"
 
 //Windows Platform:
 #if defined(WIN32) || defined(_WIN32)
@@ -103,8 +103,10 @@
 #define SYSTEM_CLA 1
 #endif
 
+#if defined(SYSTEM_CXX)
 namespace System
 {
 }
+#endif
 
 #endif
