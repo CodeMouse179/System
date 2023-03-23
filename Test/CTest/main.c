@@ -41,14 +41,14 @@ void system_end()
 
 void print_system_hpp_version()
 {
-    write("System Version   : ");
+    write("1.System Version   : ");
     write(SYSTEM_VERSION_STRING);
     write_line("");
 }
 
 void print_current_platform()
 {
-    write("Current Platform : ");
+    write("2.Current Platform : ");
 #ifdef SYSTEM_WINDOWS
     write("Windows");
 #endif
@@ -73,7 +73,7 @@ int c_or_cpp()
 
 void print_current_standard()
 {
-    write("Current Standard : ");
+    write("3.Current Standard : ");
 #ifdef SYSTEM_CXX_20
     write_line("C++ 20");
     return;
@@ -99,7 +99,7 @@ void print_current_standard()
 
 void print_current_c_standard()
 {
-    write("Current CStandard: ");
+    write("3.Current CStandard: ");
 #ifdef SYSTEM_C_17
     write_line("C 17");
     return;
@@ -121,7 +121,7 @@ void print_current_c_standard()
 
 void print_current_compiler()
 {
-    write("Current Compiler : ");
+    write("4.Current Compiler : ");
 #ifdef SYSTEM_MSC
     write("Microsoft C/C++ Compiler");
 #endif
