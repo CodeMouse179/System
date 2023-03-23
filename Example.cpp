@@ -69,6 +69,7 @@ int c_or_cpp()
 #ifdef SYSTEM_CXX
     return 2;
 #endif
+    return 0;
 }
 
 void print_current_standard()
