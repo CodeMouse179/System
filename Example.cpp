@@ -3,22 +3,31 @@
 // Platform : Windows, Linux, macOS
 
 #include "System.hpp"
-#include <iostream>
 
+#ifdef SYSTEM_CXX
+#include <iostream>
 void write(const char* str)
 {
     std::cout << str;
 }
-
-void write_line()
-{
-    std::cout << "\n";
-}
-
 void write_line(const char* str)
 {
     std::cout << str << "\n";
 }
+#endif
+
+#ifdef SYSTEM_C
+#include <stdio.h>
+void write(const char* str)
+{
+    printf(str);
+}
+void write_line(const char* str)
+{
+    printf(str);
+    printf("\n");
+}
+#endif
 
 void system_start()
 {
@@ -34,7 +43,7 @@ void print_system_hpp_version()
 {
     write("System Version   : ");
     write(SYSTEM_VERSION_STRING);
-    write_line();
+    write_line("");
 }
 
 void print_current_platform()
@@ -49,7 +58,7 @@ void print_current_platform()
 #ifdef SYSTEM_MACOS
     write("macOS");
 #endif
-    write_line();
+    write_line("");
 }
 
 int c_or_cpp()
@@ -90,7 +99,7 @@ void print_current_standard()
 void print_current_c_standard()
 {
     write("Current CStandard: ");
-    write_line();
+    write_line("");
 }
 
 void print_current_compiler()
@@ -105,7 +114,7 @@ void print_current_compiler()
 #ifdef SYSTEM_CLA
     write("Clang C/C++ Compiler");
 #endif
-    write_line();
+    write_line("");
 }
 
 int main()
