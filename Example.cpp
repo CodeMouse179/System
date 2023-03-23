@@ -94,6 +94,7 @@ void print_current_standard()
     write_line("C++ 98");
     return;
 #endif
+    write_line("");
 }
 
 void print_current_c_standard()
