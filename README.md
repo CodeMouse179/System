@@ -22,6 +22,8 @@ System.hpp is a fundamental platform-specific header file for C/C++.
 
 The purpose is to provide C/C++ programmers with convenient and reliable macros.
 
+Essentially, it provides pre-defined C/C++ macros.
+
 ## Inspiration
 
 [predef](https://github.com/cpredef/predef)
