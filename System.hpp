@@ -1,6 +1,6 @@
 //      +--------------------------------------------------------------------------------+
-//      |                                  System v0.5.1                                 |
-//      |  Modified Date : 2023/3/24                                                     |
+//      |                                  System v0.5.2                                 |
+//      |  Modified Date : 2023/3/27                                                     |
 //      |  Introduction : System in C/C++                                                |
 //      |  License : MIT                                                                 |
 //      |  Platform : Windows, Linux, macOS                                              |
@@ -19,9 +19,9 @@
 
 #define SYSTEM_VERSION_MAJOR 0
 #define SYSTEM_VERSION_MINOR 5
-#define SYSTEM_VERSION_PATCH 1
+#define SYSTEM_VERSION_PATCH 2
 #define SYSTEM_VERSION (SYSTEM_VERSION_MAJOR << 16 | SYSTEM_VERSION_MINOR << 8 | SYSTEM_VERSION_PATCH)
-#define SYSTEM_VERSION_STRING "0.5.1"
+#define SYSTEM_VERSION_STRING "0.5.2"
 
 //Microsoft C/C++ Compiler:
 #if defined(_MSC_VER) && !defined(__clang__)
@@ -69,8 +69,7 @@
 #if defined(SYSTEM_MSC)
 #if defined(__STDC_VERSION__) && !defined(__cplusplus)
 #define SYSTEM_C 1
-#endif
-#if !defined(__cplusplus)
+#elif !defined(__cplusplus)
 #define SYSTEM_C 2
 #endif
 #endif
@@ -79,8 +78,7 @@
 #if defined(SYSTEM_SCC)
 #if defined(__STDC__) && !defined(__cplusplus)
 #define SYSTEM_C 1
-#endif
-#if !defined(__cplusplus)
+#elif !defined(__cplusplus)
 #define SYSTEM_C 2
 #endif
 #endif

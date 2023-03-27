@@ -1,4 +1,4 @@
-# System 0.5.1
+# System 0.5.2
 
 [README - 中文](https://github.com/CodeMouse179/System/blob/main/Doc/README_CN.md)
 
